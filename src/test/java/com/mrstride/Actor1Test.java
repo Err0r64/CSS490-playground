@@ -10,6 +10,7 @@ public class Actor1Test {
     // You can add test methods here to test the functionality of Actor1
     // For example, you can use JUnit or any other testing framework to write tests
 
+    // AAA pattern: Arrange, Act, Assert
     // Example test method
     @Test
     public void testAct() {
@@ -29,7 +30,10 @@ public class Actor1Test {
 
         // Assert
         assertTrue(result, "The earnAnOscar method should return true");
-        verify(mockLogger).info("I earned an Oscar!");
-        
+        verify(mockLogger).info("I earned an Oscar!"); // Checking if the method was called.
+        /*
+         * If we want to verify that it was called a specific number of times, we can do:
+         *  Mockito.verify(logger, times(2)).info("I earned an Oscar!");
+         */
     }
 }
