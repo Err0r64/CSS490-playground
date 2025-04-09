@@ -41,7 +41,7 @@ public class Main implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Hello World");
         
-        behave.act();
+        behave.act(); //because we made Actor2 the (@Primary) implementation of MyBehavior, it will call Actor2's act method.
     }
 
     public static void setupLoggers() {
